@@ -5,7 +5,12 @@ export default function CounterApp(state = 0, action) {
         case types.INCREMENT:
             return state = state + 1;
         case types.DECREMENT:
-            return state = state - 1;
+            if (state !== 0) {
+                return state = state - 1;
+            }
+            return state;
+        case types.INCREMENT10:
+            return state = state + 10;
     }
     return state;
 }

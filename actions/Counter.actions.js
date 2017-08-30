@@ -11,3 +11,9 @@ export function decrement() {
         type: types.DECREMENT
     }
 }
+
+export function increment10() {
+    return {
+        type: types.INCREMENT10
+    }
+}
